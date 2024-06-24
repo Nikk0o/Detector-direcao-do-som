@@ -254,7 +254,7 @@ void loop ()
 
 ```
 
-## Vídeo do projeto funcionando
+## Vídeo do circuito funcionando
 
 ## Circuito
 
