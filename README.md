@@ -1,6 +1,7 @@
-# Sensor de som com direção 
-<img src="imagens\rosto.jpeg">
+# Detector de direção do som
 
+<img src="imagens\rosto.jpeg">
+ 
 ---
 
 ### Descrição
