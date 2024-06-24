@@ -263,3 +263,5 @@ void loop ()
 
 ## Circuito
 
+<img src="Screenshot_20240624_181933_Samsung Internet.jpg">
+Obs: o tinkercad não tem microfone, então usei potenciômetros pra representar 
