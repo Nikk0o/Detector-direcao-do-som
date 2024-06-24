@@ -259,4 +259,8 @@ void loop ()
 ## Circuito
 
 <img src="imagens\Circuito.jpg">
-Obs: o wokwi (e tinkercad) não tem microfone, então usei potenciômetros pra representar 
+Obs: o wokwi (e tinkercad) não tem microfone, então usei potenciômetros pra representar <br> <br>
+
+<img src="imagens/Screenshot_20240624_190438_Gallery.jpg"> <br>
+
+foto de teste
