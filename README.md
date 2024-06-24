@@ -1,5 +1,5 @@
 # Sensor de som com direção 
-<img src="rosto">
+<img src="imagens\rosto.jpeg">
 
 ---
 
@@ -263,5 +263,5 @@ void loop ()
 
 ## Circuito
 
-<img src="Screenshot_20240624_181933_Samsung Internet.jpg">
+<img src="imagens\Circuito.jpg">
 Obs: o wokwi (e tinkercad) não tem microfone, então usei potenciômetros pra representar 
