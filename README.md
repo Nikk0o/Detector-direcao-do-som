@@ -1,14 +1,10 @@
 # Detector de direção do som
 
 <img src="imagens\rosto.jpeg">
- 
----
 
 ### Descrição
 
 Este é um projeto de arduino que simula a audição q vem de direções diferentes de uma criatura q tem uma carinha.
-
----
 
 | Componentes |
 | :--------- |
@@ -19,8 +15,6 @@ Este é um projeto de arduino que simula a audição q vem de direções diferen
 | Motor de passo 28byj-48 com drive |
 | 2x sensor de som |
 | resistor 330 Ohm |
-
----
 
 ## Código
 
