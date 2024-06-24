@@ -6,15 +6,15 @@
 
 Este é um projeto de arduino que simula a audição q vem de direções diferentes de uma criatura q tem uma carinha.
 
-| Componentes |
-| :--------- |
-| Arduino Uno |
-| Buzzer passivo 5V |
-| Display lcd 16x2 |
-| I2C |
-| Motor de passo 28byj-48 com drive |
-| 2x sensor de som |
-| resistor 330 Ohm |
+| Componentes | Quantidade |
+| :--------- | :--- |
+| Arduino Uno | 1 |
+| Buzzer passivo 5V | 1 |
+| Display lcd 16x2 | 1 |
+| I2C | 1 |
+| Motor de passo 28byj-48 com drive | 1 |
+| Sensor de som | 2 |
+| resistor 330 Ohm | 1 |
 
 ## Código
 
