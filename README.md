@@ -273,7 +273,7 @@ void loop ()
 
 ## Imagens do circuito
 
-![circuito1](imagens/20240625_113354.jpg)
+![circuito1](imagens/circuitomontado.jpg)
 
 ![circuito2](imagens/20240625_113403.jpg)
 
