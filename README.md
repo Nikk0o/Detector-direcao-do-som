@@ -2,19 +2,28 @@
 
 <img src="imagens\rosto.jpeg">
 
-### Descrição
+### Resumo
 
-Este é um projeto de arduino que simula a audição q vem de direções diferentes de uma criatura q tem uma carinha.
+O projeto é um robô que gira para "olhar" na direção de um som emitido. Este projeto foi feito para a disciplina de Eletrônica para Computação do curso de Ciências de Computação do ICMC, da USP. 
 
-| Componentes | Quantidade |
-| :--------- | :--- |
-| Arduino Uno | 1 |
-| Buzzer passivo 5V | 1 |
-| Display lcd 16x2 | 1 |
-| I2C | 1 |
-| Motor de passo 28byj-48 com drive | 1 |
-| Sensor de som | 2 |
-| resistor 330 Ohm | 1 |
+### Componentes
+
+| Quantidade | Componentes | Preços |
+|--|--|--|
+| 1 | Arduino Uno | R$ 69,21 |
+| 1 | Buzzer Passivo 5V | R$ 3,14 |
+| 1 | Display LCD 16x2 |R$ 9,78|
+| 1 | Módulo Adaptador I2C | R$ 7,38 |
+| 1 | Motor de Passo 28BYJ-48 c/Drive | R$ 16,87 |
+| 2 | Sensor de Som | R$ 15,00 |
+| 1 | Resistor 330 Ω | R$ 0,05 |
+| **Total** |  | **R$ 121,43** |
+
+### Funcionamento
+
+- O projeto utiliza dois microfones, posicionados em lados opostos, para estimar a direção de um som a partir da diferença nos sinais detectados.
+- Quando uma direção é estimada, um motor de passo gira todo o circuito, incluindo os microfones, na direção do som.
+- Um display LCD é utilizado para simular um rosto e um buzzer para emitir sons, com o objetivo de criar um robô amigável.
 
 ## Código
 
@@ -256,11 +265,21 @@ void loop ()
 
 ## Vídeo do circuito funcionando
 
-## Circuito
+[Vídeo no YouTube](https://www.youtube.com/watch?v=)
+
+## Imagens do circuito
 
 <img src="imagens\Circuito.jpg">
-Obs: o wokwi (e tinkercad) não tem microfone, então usei potenciômetros pra representar <br> <br>
+
+[Link do Circuito no Tinkercad](https://www.tinkercad.com/things/)
+Obs: Os simuladores de circuito não têm microfone, então foram representados com potenciômetros. <br> <br>
 
 <img src="imagens/Screenshot_20240624_190438_Gallery.jpg"> <br>
 
-foto de teste
+Foto do projeto completo
+
+## Membros
+- Guilherme Pereira de Sá
+- Lucas Rodrigues Baptista
+- Nathalia Monalisa Coelho Mota
+- Otávio Biagioni Melo
