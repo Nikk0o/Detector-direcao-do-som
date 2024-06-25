@@ -275,7 +275,7 @@ void loop ()
 
 ![circuito1](imagens/circuitomontado.jpg)
 
-![circuito2](imagens/20240625_113403.jpg)
+![circuito2](imagens/placanomotor.jpg)
 
 Fotos do projeto completo.
 
