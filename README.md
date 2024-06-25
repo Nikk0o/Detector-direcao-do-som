@@ -250,19 +250,20 @@ void loop ()
 
 ## Imagens do circuito
 
-<img src="imagens\Circuito.png">
-
 ![circuito1](imagens/20240625_113354.jpg)
 
-![circuito2]
+![circuito2](imagens/20240625_113403.jpg)
 
+Fotos do projeto completo.
+
+![circuitotinkercad](imagens/Circuito.png)
+
+Projeto no Tinkercad.
 
 [Link do Circuito no Tinkercad]([https://www.tinkercad.com/things/](https://www.tinkercad.com/things/8v7tix240Zq-sensor-de-direcao-do-som?sharecode=VMDjOKay2ZmGqD2se0dshB3SxqlJB_nkaiPQREiuZHg))
-Obs: Os simuladores de circuito não têm microfone, então foram representados com potenciômetros. <br> <br>
 
-<img src="imagens/Screenshot_20240624_190438_Gallery.jpg"> <br>
-
-Foto do projeto completo
+Obs: Os simuladores de circuito não têm microfone, então foram representados com potenciômetros.
+<br>
 
 ## Membros
 - Guilherme Pereira de Sá
