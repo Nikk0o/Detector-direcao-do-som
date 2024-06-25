@@ -24,6 +24,7 @@ O projeto é um robô que gira para "olhar" na direção de um som emitido. Este
 - O projeto utiliza dois microfones, posicionados em lados opostos, para estimar a direção de um som a partir da diferença nos sinais detectados.
 - Quando uma direção é estimada, um motor de passo gira todo o circuito, incluindo os microfones, na direção do som.
 - Um display LCD é utilizado para simular um rosto e um buzzer para emitir sons, com o objetivo de criar um robô amigável.
+- O buzzer é conectado a um resistor de 330 Ω para diminuir o volume dos sons.
 
 ## Código
 
