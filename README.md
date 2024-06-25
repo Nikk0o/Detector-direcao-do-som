@@ -1,6 +1,7 @@
 # Detector de direção do som
 
 ![Zack](imagens/rosto.jpeg)
+<!--Zack é o nome q eu dei pra ele-->
 
 ### Resumo
 
