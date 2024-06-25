@@ -119,7 +119,6 @@ void loop ()
 
  if (direita == HIGH || esquerda == HIGH)
   {
-    // Delay que evita que o stepper receba comando para se mover antes de ter terminado.
     delay(100);
     ti_d = t;
 
