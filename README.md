@@ -56,7 +56,7 @@ byte olho_piscando[8] = {B00000, B00000, B00000, B00000, B00000, B00000, B00000,
 bool piscando = false, dormindo = false;
 long ti_p = 0, ti_d = 0, ti_m = 0;
 const int numero_passos_giro = 200, passos_por_ciclo = 4, max_pass = 50, giro_maximo = 100;
-int movendo = -1;
+int movendo = 0;
 int n_passos = 0, pos_atual = 0;
 
 Stepper motor(numero_passos_giro, 8, 10, 9, 11);
@@ -158,62 +158,42 @@ void loop ()
     {
       if (esquerda == HIGH && direita == LOW)
       {
-        movendo = 0;
+        movendo = 1;
       }
       else if (direita == HIGH && esquerda == LOW)
       {
-        movendo = 1;
+        movendo = -1;
       }
       else
       {
-        movendo = -1;
+        movendo = 0;
       }
     }
   }
 
-  if (movendo == 0)
+  // Direita - subreai
+  // Esquerda - soma
+
+  if (abs(pos_atual) <= abs(giro_maximo))
   {
-    if (pos_atual <= giro_maximo)
+    pos_atual += movendo;
+    n_passos += movendo;
+
+    if (abs(n_passos) > abs(max_pass))
     {
-      Serial.println("esquerda");
-      n_passos++;
-      pos_atual++;
-      if (n_passos > max_pass)
-      {
-        n_passos = 0;
-        movendo = -1;
-      }
-      else
-      {
-        motor.step(passos_por_ciclo);
-      }
+      n_passos = 0;
+      movendo = 0;
     }
     else
     {
-      movendo = -1;
+      motor.step(movendo*passos_por_ciclo);
     }
   }
-  else if (movendo == 1)
+  else
   {
-    if (pos_atual >= -giro_maximo)
-    {
-      pos_atual--;
-      Serial.println("direita");
-      n_passos--;
-      if (n_passos < -max_pass)
-      {
-        n_passos = 0;
-        movendo = -1;
-      }
-      else
-      {
-        motor.step(-passos_por_ciclo);
-      }
-    }
-    else
-    {
-      movendo = -1;
-    }
+    pos_atual -= movendo;
+    n_passos = 0;
+    movendo = 0;
   }
 
   // Ações que não dependem de input
