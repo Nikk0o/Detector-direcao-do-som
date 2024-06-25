@@ -119,7 +119,6 @@ void loop ()
 
  if (direita == HIGH || esquerda == HIGH)
   {
-    delay(100);
     ti_d = t;
 
     // Acorda o robô
