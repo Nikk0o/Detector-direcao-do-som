@@ -252,7 +252,7 @@ void loop ()
 
 <img src="imagens\Circuito.jpg">
 
-[Link do Circuito no Tinkercad](https://www.tinkercad.com/things/)
+[Link do Circuito no Tinkercad]([https://www.tinkercad.com/things/](https://www.tinkercad.com/things/8v7tix240Zq-sensor-de-direcao-do-som?sharecode=VMDjOKay2ZmGqD2se0dshB3SxqlJB_nkaiPQREiuZHg))
 Obs: Os simuladores de circuito não têm microfone, então foram representados com potenciômetros. <br> <br>
 
 <img src="imagens/Screenshot_20240624_190438_Gallery.jpg"> <br>
