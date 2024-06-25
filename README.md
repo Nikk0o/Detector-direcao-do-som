@@ -34,7 +34,8 @@ O projeto é um robô que gira para "olhar" na direção de um som emitido. Este
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 
-// Variáveis para ações
+// Macros que determinam a duração e a frequência de cada ação
+
 #define DELTA_D 23000
 #define TEMPO_E 3000
 #define DELTA_M 3000
@@ -43,6 +44,8 @@ O projeto é um robô que gira para "olhar" na direção de um som emitido. Este
 #define TEMPO_P 100
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Caracteres para desenhar o rosto
 
 byte boca_centro_esq[8] = {B00000, B00000, B00000, B00000, B00000, B00001, B00010, B11100};
 byte boca_centro_dir[8] = {B00000, B00000, B00000, B00000, B00000, B10000, B01000, B00111};
@@ -57,8 +60,7 @@ byte olho_piscando[8] = {B00000, B00000, B00000, B00000, B00000, B00000, B00000,
 bool piscando = false, dormindo = false;
 long ti_p = 0, ti_d = 0, ti_m = 0;
 const int numero_passos_giro = 200, passos_por_ciclo = 4, max_pass = 50, giro_maximo = 100;
-int movendo = 0;
-int n_passos = 0, pos_atual = 0;
+int movendo = 0, n_passos = 0, pos_atual = 0;
 
 Stepper motor(numero_passos_giro, 8, 10, 9, 11);
 
@@ -68,6 +70,7 @@ void setup ()
   lcd.init();
   lcd.backlight();
 
+  // Boca
   lcd.createChar(1, boca_esq_cima);
   lcd.createChar(0, boca_dir_cima);
   lcd.createChar(2, boca_esq_baixo);
@@ -98,7 +101,6 @@ void setup ()
 
   pinMode(6, INPUT);
   pinMode(5, INPUT);
-
   pinMode(7, OUTPUT);
 
   randomSeed(analogRead(A2));
@@ -117,9 +119,9 @@ void loop ()
 
  if (direita == HIGH || esquerda == HIGH)
   {
+    // Delay que evita que o stepper receba comando para se mover antes de ter terminado.
     delay(100);
     ti_d = t;
-    n_passos = 0;
 
     // Acorda o robô
     if (dormindo == true)
@@ -171,17 +173,30 @@ void loop ()
       }
     }
   }
+  /*
+  * Direita - sentido anti-horário, movendo = -1
+  * Esquerda - sentido horário, movendo = 1
+  */
 
-  // Direita - subreai
-  // Esquerda - soma
+  /*
+  * Aqui verificamos qual seria a posição
+  * do stepper caso ele se movesse na direção
+  * indicada por "movendo" e se ela estaria
+  * dentro do intervalo de -200 a 200 para,
+  * em caso afirmativo, movê-lo.
+  */
 
+  pos_atual += movendo;
   if (abs(pos_atual) <= abs(giro_maximo))
   {
-    pos_atual += movendo;
     n_passos += movendo;
 
+    /* Aqui repetimos o mesmo processo de antes,
+    *  mas para n_passos.
+    */
     if (abs(n_passos) > abs(max_pass))
     {
+      pos_atual -= movendo;
       n_passos = 0;
       movendo = 0;
     }
@@ -198,6 +213,11 @@ void loop ()
   }
 
   // Ações que não dependem de input
+
+  /*
+  * Faz o robô "dormir" caso não tenha recebido nenhum sinal
+  * do microfone em 23 segundos.
+  */
   if (t - ti_d >= DELTA_D && dormindo == false)
   {
     dormindo = true;
@@ -208,6 +228,10 @@ void loop ()
     lcd.setCursor(10, 0);
     lcd.write(7);
   }
+
+  /*
+  * Faz o robô "piscar" a cada 1,5 segundos.
+  */
   if (t - ti_p >= DELTA_P && dormindo == false && piscando == false)
   {
     ti_p = t;
@@ -227,7 +251,7 @@ void loop ()
     lcd.write(6);
   }
 
-  // Parte do código que faz o som
+  // Emite um som no buzzer a cada 3 segundos.
   if (dormindo == false && t - ti_m >= DELTA_M)
   {
     // se rand estiver entre 300 e 185, o buzzer irá fazer um som
