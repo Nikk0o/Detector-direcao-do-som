@@ -288,6 +288,12 @@ Projeto no Tinkercad.
 Obs: Os simuladores de circuito não têm microfone, então foram representados com potenciômetros.
 <br>
 
+## Inspirações e ferramentas usadas no projeto
+
+[Gerador de caracteres especiais para o rosto](https://nonnullish.github.io/screenduino/) 
+<br>
+[Inspiração para o projeto](https://www.youtube.com/watch?v=zjbMR05WBNE)
+
 ## Membros
 - Guilherme Pereira de Sá
 - Lucas Rodrigues Baptista
